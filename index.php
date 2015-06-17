@@ -83,7 +83,10 @@ if(isset($_POST['url'])) {
               <?php if($DEBUG_MODE) { 
                       print_r($_POST);
                     } ?>
-              <div><h3>Here's your link: </h3><h5><a href='<?php echo $downloadLocation; ?>/<?php echo $filePath; ?>'><?php echo $filePath; ?></a> </h5></div>
+              <div class="container text-center">
+                <h3>Here's your link: </h3>
+                <h5><a href='<?php echo $downloadLocation; ?>/<?php echo $filePath; ?>'><?php echo $filePath; ?></a> </h5>
+              </div>
       <?php } ?>
       <div>
 
