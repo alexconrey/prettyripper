@@ -3,6 +3,7 @@
 a nice web interface to download youtube videos <br />
 Written by Alex Conrey <br />
 
+<img src="http://i.imgur.com/XwIlMKF.png" width="640px" height="480px">
 
 <ul>
 Requires:
