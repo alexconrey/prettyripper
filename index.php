@@ -1,12 +1,15 @@
 <?php include('function.php'); 
 
+$downloadLocation = '/d'; //NO TRAILING SLASH HERE!
+$DEBUG_MODE = false;
+
 
 if(isset($_POST['url'])) {
   $URL = $_POST['url'];
-  $retv = getVideo($URL);
-  $correctFileExtension = str_replace('mp4', 'mp3', getFile($URL));
-  //$filePath = str_replace(' ', '_', $correctFileExtension);
-  $filePath = str_replace(' ', '', $correctFileExtension);
+  $format = $_POST['format'];
+  $retv = getVideo($URL, $format);
+  $filePath = str_replace(' ', '', (getFile($URL).'.'.$format));
+  //$filePath = str_replace(' ', '', $filePath);
   $fullPath = ($_SERVER['SERVER_NAME'] . '/d/' . $filePath);
 }
 ?>
@@ -43,11 +46,10 @@ if(isset($_POST['url'])) {
 
   <body>
 
-    <div class="container">
+    <div class="container text-center" style="margin-top: 15%;">
+        <h2 class="form-signin-heading">Want some music? Have some music.</h2>
 
       <form class="form-signin" method="POST" action="index.php">
-        <h2 class="form-signin-heading">Want some music? Have some music.</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
         <div class="row">
           <div class="col-lg-12">
             <div class="input-group">
@@ -59,12 +61,29 @@ if(isset($_POST['url'])) {
           </div>
         </div>
 
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default"><input type="hidden" name="format" value="aac">AAC</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default"><input type="hidden" name="format" value="mp3">MP3</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default"><input type="hidden" name="format" value="wav">WAV</button>
+          </div>
+        </div>
+
         <!--<input type="text" name="url" class="form-control" placeholder="https://www.youtube.com/watch?v=8o3nZQU4evo" autofocus>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Go get it!</button>-->
       </form>
+
+
       <?php if(isset($_POST['url'])) { ?>
               <?php $retv; ?>
-              <div><h3>Here's your video: </h3><h5><a href='/d/<?php echo $filePath; ?>'><?php echo $filePath; ?></a> </h5></div>
+              <?php if($DEBUG_MODE) { 
+                      print_r($_POST);
+                    } ?>
+              <div><h3>Here's your link: </h3><h5><a href='<?php echo $downloadLocation; ?>/<?php echo $filePath; ?>'><?php echo $filePath; ?></a> </h5></div>
       <?php } ?>
       <div>
 
@@ -73,7 +92,7 @@ if(isset($_POST['url'])) {
     </div> <!-- /container -->
 
     <footer class="footer">
-      <div class="container">
+      <div class="container text-left">
         <p class="text-muted"><span class="label label-default">&copy;2015</span><a href="mailto:alex@conrey.us"><span class="label label-danger">Alex Conrey</span></a></p>
       </div>
     </footer>
