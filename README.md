@@ -15,6 +15,7 @@ Requires:
 <h4>Installation!</h4>
 <ul>
 	<li>Download prettyripper (https://github.com/alexconrey/prettyripper)</li>
+	<li>'mkdir d/' in wherever prettyripper was deployed</li>
 	<li>Make sure youtube-dl and libav-tools are installed</li>
 	<li>Make sure the downloading directory is writeable by the user:group of your httpd</li>
 </ul>
