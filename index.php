@@ -1,16 +1,18 @@
 <?php include('function.php'); 
 
-$downloadLocation = '/d'; //NO TRAILING SLASH HERE!
+$downloadLocation = '/d'; //NO TRAILING SLASH HERE! This directory must exist prior to execution
 $DEBUG_MODE = false;
 
 
 if(isset($_POST['url'])) {
   $URL = $_POST['url'];
-  $format = $_POST['format'];
+  if(!(isset($_POST['format']))) {
+    $format = 'mp3';
+  } else {
+    $format = $_POST['format'];
+  }
   $retv = getVideo($URL, $format);
   $filePath = str_replace(' ', '', (getFile($URL).'.'.$format));
-  //$filePath = str_replace(' ', '', $filePath);
-  $fullPath = ($_SERVER['SERVER_NAME'] . '/d/' . $filePath);
 }
 ?>
 <!DOCTYPE html>
@@ -25,7 +27,7 @@ if(isset($_POST['url'])) {
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Download YouTube Video</title>
+    <title>PrettyRipper</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
