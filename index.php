@@ -48,14 +48,27 @@ if(isset($_POST['url'])) {
       <form class="form-signin" method="POST" action="index.php">
         <h2 class="form-signin-heading">Want some music? Have some music.</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="text" name="url" class="form-control" placeholder="https://www.youtube.com/watch?v=8o3nZQU4evo" required autofocus>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Go get it!</button>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="input-group">
+              <input type="text" class="form-control" name="url" placeholder="https://www.youtube.com/watch?v=8o3nZQU4evo" required autofocus>
+              <span class="input-group-btn">
+                <button class="btn btn-default btn-lg btn-primary" type="submit">Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--<input type="text" name="url" class="form-control" placeholder="https://www.youtube.com/watch?v=8o3nZQU4evo" autofocus>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Go get it!</button>-->
       </form>
       <?php if(isset($_POST['url'])) { ?>
               <?php $retv; ?>
               <div><h3>Here's your video: </h3><h5><a href='/d/<?php echo $filePath; ?>'><?php echo $filePath; ?></a> </h5></div>
       <?php } ?>
       <div>
+
+
 
     </div> <!-- /container -->
 
