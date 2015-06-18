@@ -1,0 +1,11 @@
+Package: prettyripper-doc
+Source: prettyripper
+Version: 0.1
+Architecture: all
+Maintainer: Alex Conrey <alex@conrey.us>
+Installed-Size: 9
+Section: unknown
+Priority: optional
+Homepage: https://github.com/alexconrey/prettyripper.git
+Description: documentation for prettyripper
+ <insert long description, indented with spaces>

@@ -1,0 +1,10 @@
+Package: prettyripper
+Version: 0.1
+Architecture: i386
+Maintainer: Alex Conrey <alex@conrey.us>
+Installed-Size: 1072
+Section: unknown
+Priority: optional
+Homepage: https://github.com/alexconrey/prettyripper.git
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

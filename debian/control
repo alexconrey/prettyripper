@@ -1,0 +1,20 @@
+Source: prettyripper
+Section: unknown
+Priority: optional
+Maintainer: Alex Conrey <alex@conrey.us>
+Build-Depends: debhelper (>= 9), apache2, libapache2-mod-php5, youtube-dl, libav-tools
+Standards-Version: 3.9.5
+Homepage: https://github.com/alexconrey/prettyripper.git
+Vcs-Git: git://github.com/alexconrey/prettyripper.git
+#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/prettyripper.git;a=summary
+
+Package: prettyripper
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
+Package: prettyripper-doc
+Architecture: all
+Description: documentation for prettyripper
+ <insert long description, indented with spaces>
