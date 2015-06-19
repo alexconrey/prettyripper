@@ -21,7 +21,9 @@ set -e
 case "$1" in
     configure)
 #	mkdir /var/www/d
-	rm /var/www/index.html
+	if [ -f	/var/www/index.html ]; then
+		mv /var/www/index.html /var/www/index.html.old
+	fi
 	chmod 777 /var/www/d
     ;;
 
