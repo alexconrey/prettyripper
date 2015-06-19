@@ -11,10 +11,5 @@ Vcs-Git: git://github.com/alexconrey/prettyripper.git
 Package: prettyripper
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
-
-Package: prettyripper-doc
-Architecture: all
-Description: documentation for prettyripper
- <insert long description, indented with spaces>
+Description: Prettifies the streaming content process.
+  Prettifies the streaming content process. All files are placed in the default /var/www
