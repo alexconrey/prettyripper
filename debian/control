@@ -3,7 +3,7 @@ Section: unknown
 Priority: optional
 Maintainer: Alex Conrey <alex@conrey.us>
 Build-Depends: debhelper (>= 9), apache2, libapache2-mod-php5, youtube-dl, libav-tools
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: https://github.com/alexconrey/prettyripper.git
 Vcs-Git: git://github.com/alexconrey/prettyripper.git
 #Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/prettyripper.git;a=summary
