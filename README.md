@@ -14,6 +14,8 @@ Requires:
 <br />
 <h4>Installation!</h4>
 <ul>
+	<li><b>NEW!</b>If you're running Debian Sid - install the .deb file in this repository!!</li>
+
 	<li>Download prettyripper (https://github.com/alexconrey/prettyripper)</li>
 	<li>'mkdir d/' in wherever prettyripper was deployed</li>
 	<li>Make sure youtube-dl and libav-tools are installed</li>
