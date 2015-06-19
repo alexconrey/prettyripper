@@ -1,14 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: prettyripper
-Source: <url://example.com>
+Source: http://github.com/alexconrey/prettyripper.git
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
+Copyright: 2015 Alex Conrey <alex@conrey.us>
 License: GPL-3.0+
 
 Files: debian/*
-Copyright: 2015 root <alex@conrey.us>
+Copyright: 2015 Alex Conrey <alex@conrey.us>
 License: GPL-3.0+
 
 License: GPL-3.0+
